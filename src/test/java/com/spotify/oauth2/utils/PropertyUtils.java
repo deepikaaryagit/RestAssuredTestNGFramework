@@ -1,0 +1,39 @@
+package com.spotify.oauth2.utils;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.Properties;
+
+public class PropertyUtils {
+
+	public static Properties propertyLoader(String filePath) {
+		Properties properties = new Properties();
+		BufferedReader reader ;
+		
+		try {
+			
+				reader = new BufferedReader(new FileReader(filePath));
+				try {
+					
+					properties.load(reader);
+					reader.close();
+					
+				}catch(Exception ex)
+				{
+					ex.printStackTrace();
+					throw new RuntimeException("Failed to loaded Properties files " + filePath);
+				}
+			
+		}
+		catch(FileNotFoundException ex)
+		{
+			ex.printStackTrace();
+			throw new RuntimeException("Properties files not found at " + filePath);
+			
+		}
+		
+		return properties;
+	}
+	
+}
