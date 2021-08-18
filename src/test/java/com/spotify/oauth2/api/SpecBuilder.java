@@ -19,7 +19,7 @@ public class SpecBuilder {
 		return requestSpecBuilder
 						.setBaseUri(System.getProperty("BASE_URI"))
 						//.setBaseUri("https://api.spotify.com/")
-						.setContentType(ContentType.ANY)
+		
 						.addFilter(new AllureRestAssured())
 						.log(LogDetail.ALL).build();
 		
