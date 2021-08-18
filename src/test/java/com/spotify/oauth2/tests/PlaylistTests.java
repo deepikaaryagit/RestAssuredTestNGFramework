@@ -50,7 +50,7 @@ public class PlaylistTests extends BaseTest{
 	}
 
 	@Story("Create a PlayList Story")
-	@Test
+	//@Test
 	public void updatePlaylistName() {
 		Playlist requestPlaylist = playlistBuilder("Updated PlayList", "Updated Description", false);
 

@@ -36,7 +36,7 @@ public class RestResource {
 		
 		return given().spec(getRequestSpecification())
 				.auth().oauth2(token)
-				.contentType(ContentType.ANY)
+			//	.contentType(ContentType.ANY)
 				//.header("Authorization", "Bearer " + token)
 				.body(requestPlaylist)
 			.when()
