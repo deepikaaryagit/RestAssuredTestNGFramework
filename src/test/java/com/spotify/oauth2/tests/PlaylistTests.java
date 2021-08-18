@@ -49,6 +49,7 @@ public class PlaylistTests extends BaseTest{
 
 	}
 
+	/*Commenting this testcase for now*/
 	@Story("Create a PlayList Story")
 	//@Test
 	public void updatePlaylistName() {
